@@ -55,3 +55,6 @@ toDoList = function(){
 blogPage = function(){
     window.location.href = "../Pages/BlogPage.html";
 }
+sitesPage = function(){
+    window.location.href = "../Pages/SitesPage.html";
+}

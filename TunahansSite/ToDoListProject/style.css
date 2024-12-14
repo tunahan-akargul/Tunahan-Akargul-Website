@@ -257,7 +257,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     border-color: rgb(49, 49, 49);
     border-style: solid;
     border-radius: 20px;
-    height: 15vh;
+    height: 22vh;
     width: 10vw;
     z-index: 3;
 }

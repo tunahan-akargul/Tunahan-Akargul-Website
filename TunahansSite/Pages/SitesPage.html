@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogPage</title>
+    <title>SitesPage</title>
     <link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
     <div id="myBody">
 
-        <div id="menuToggle">
+                <div id="menuToggle">
 
             <input type="checkbox" />
 
@@ -22,16 +22,15 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <a onclick="homePage()"><li>Home</li></a>
-                <a onclick="aboutPage()"><li>About</li></a>
-                <a onclick="blogPage()"><li>Blog</li></a>
-                <a onclick="gamesPage()"><li>Games</li></a>
-                <a onclick="sitesPage()"><li>Sites</li></a>
+              <a onclick="homePage()"><li>Home</li></a>
+              <a onclick="aboutPage()"><li>About</li></a>
+              <a onclick="blogPage()"><li>Blog</li></a>
+              <a onclick="gamesPage()"><li>Games</li></a>
+              <a onclick="sitesPage()"><li>Sites</li></a>
             </ul>
         </div>
 
         <div class="menu" id="myDiv">
-
 
             <label class="pages" id="openOption">
                 Products &#10549;
@@ -41,24 +40,35 @@
                     <label class="page" onclick="toDoList()">To Do List</label>
                 </div>
             </label>
-            <label class="pages">Blog</label>
+            <label class="pages" onclick="blogPage()">Blog</label>
             <label class="pages" onclick="aboutPage()">About</label>
             <label class="pages" onclick="homePage()">Home</label>
 
             <img src="../myImages/file.png" onclick="homePage()" class="logo">
         </div>
-        <div>
-            <div class="firstTitle">
-                <h1>WELCOME TO THE BLOG PAGE</h1>
-            </div>
-            <div class="paragraphSection">
-                <p>
-                    This is my blog page.
-                </p>
-            </div>
+        <div class="games">
+                <div>
+                    <div class="firstTitle">
+                        <label>1 ) WordWise :</label>
+                        <img src="../myImages/realIcon-photoaidcom-cropped.png" class="sitesImage">
+                    </div>
+                
+                    <div class="paragraphSection">
+                        <p>
+                            Do you want to improve your side language? Try wordwise! Write the words you see
+                             with their meanings to wordwise and save. And whenever you want you can look words you want to learn.
+                              To do these its enough write "wordwise.site" in URL s
+                            ection at your browser. Or you can click the link at my biography. Enjoy it! <br> (Just For Mobile)
+                            <br>
+                            <a href="https://wordwise.site">wordwise.site</a>
+        
+                        </p>
+                    </div>
+                    
+                </div>
         </div>
     </div>
     <script src="../Menu/MenuSettings.js"></script> 
-    <script src="../Menu/AnimationSettings.js"></script>
+    <script src="../Menu/GamePage.js"></script>
 </body>
 </html>
