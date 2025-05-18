@@ -58,3 +58,21 @@ blogPage = function(){
 sitesPage = function(){
     window.location.href = "../Pages/SitesPage.html";
 }
+aboutPageForPages = function(){
+    window.location.href = "../../Pages/AboutPage.html";
+}
+gamesPageForPages = function(){
+    window.location.href = "../../Pages/GamesPage.html";
+}
+sitesPageForPages = function(){
+    window.location.href = "../../Pages/SitesPage.html";
+}
+homePageForPages = function(){
+    window.location.href = "../../Pages/HomePage.html";
+}
+toDoListForPages = function(){
+    window.location.href = "../../ToDoListProject/index.html";
+}
+blogPageForPages = function(){
+    window.location.href = "../../Pages/BlogPage.html";
+}
