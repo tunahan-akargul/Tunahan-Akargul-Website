@@ -48,6 +48,8 @@ body {
 }
 .simpleImage{
     border-radius: 1vw;
+    height: 4vw;
+    width: auto;
 }
 .sideBySide{
     display: grid;
@@ -402,6 +404,72 @@ body {
 
 @media (max-width: 480px) {
 
+    h1{
+        font-size: 6vw;
+    }
+    .smallTitleContainer {
+        margin-left: 2vw;
+        margin-top: 5vh;
+    }
+
+    .smallTitle {
+        text-align: center;
+        font-size: 8vw;
+        margin-left: 1vw;
+    }
+
+    .textContainer {
+        margin-left: 2vw;
+        width: 95vw;
+    }
+
+    .longParagraphSection {
+        font-size: 4vw;
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .sideBySide {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+
+    .window {
+        width: 90vw;
+    }
+
+    .windowTab {
+        font-size: 4vw;
+        padding: 1vw 2vw;
+    }
+
+    .codeTab {
+        font-size: 3.5vw;
+    }
+
+    .codeLine {
+        margin: 0 2vw;
+    }
+
+    .lineNumber {
+        margin-left: 0.5vw;
+        margin-right: 0.3vw;
+        padding-right: 0.5vw;
+    }
+
+    .hiddenComment {
+        display: none;
+    }
+    .simpleImage{
+        height: 15vw;
+        border-radius: 3vw;
+    }
+    .warning {
+        font-size: 3.5vw;
+    }
+    .blogTitle{
+        text-align: center;
+    }
     @keyframes rightToLeft {
         0% {
             left: 180%;
