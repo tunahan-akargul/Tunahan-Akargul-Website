@@ -402,7 +402,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (hover: none) and (max-width: 480px) {
 
     h1{
         font-size: 6vw;
@@ -469,7 +469,6 @@ body {
     }
     .blogTitle{
         text-align: center;
-        transition:none;
     }
     @keyframes rightToLeft {
         0% {
