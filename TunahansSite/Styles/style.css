@@ -469,6 +469,7 @@ body {
     }
     .blogTitle{
         text-align: center;
+        animation: none;
     }
     @keyframes rightToLeft {
         0% {
