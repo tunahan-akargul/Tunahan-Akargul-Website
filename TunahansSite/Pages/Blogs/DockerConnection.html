@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../myImages/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogPage</title>
+    <link rel="stylesheet" href="../../Styles/style.css">
+</head>
+<body style="justify-content:start; margin-bottom: 12vw;">
+    <div id="myBody">
+
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a onclick="homePage()"><li>Home</li></a>
+                <a onclick="aboutPage()"><li>About</li></a>
+                <a onclick="blogPage()"><li>Blog</li></a>
+                <a onclick="gamesPage()"><li>Games</li></a>
+                <a onclick="sitesPage()"><li>Sites</li></a>
+            </ul>
+        </div>
+
+        <div class="menu" id="myDiv">
+
+
+            <label class="pages" id="openOption">
+                Products &#10549;
+                <div class="openOption" id="openDiv">
+                    <label class="page" onclick="gamesPage()">Games</label>
+                    <label class="page" onclick="sitesPage()">Sites</label>
+                    <label class="page" onclick="toDoList()">To Do List</label>
+                </div>
+            </label>
+            <label class="pages">Blog</label>
+            <label class="pages" onclick="aboutPage()">About</label>
+            <label class="pages" onclick="window.location.href = '../HomePage.html'">Home</label>
+
+            <img src="../../myImages/file.png" onclick="homePage()" class="logo">
+        </div>
+        <div>
+            <div class="smallTitleContainer">
+                <i class="fas fa-arrow-left fa-2x backButton" onclick="window.location.href = '../BlogPage.html'"></i>
+                <h1 class="smallTitle"><u>How to connect your project to Docker?</u></h1>
+            </div>
+
+            <div class="textContainer">
+                <h1>First one we have to learn to what is Docker?</h1>
+                <p class="longParagraphSection">
+                    Before we dive into commands and setups, it’s important to understand what Docker actually is. Docker is a platform that helps developers package applications and their dependencies into a container—a lightweight, portable unit that can run consistently on any system. This means no more “it works on my machine” problems. Whether you’re working on a small project or deploying something at scale, Docker gives you a cleaner, more reliable way to build, ship, and run your software.
+                </p>
+                <p class="longParagraphSection"> <b>ForExample</b> You have a software company and you hired an employee. You have to set up the project to his computer. At this time it can cause problems likely. Because generally being not easy to set up project to computer. So it can causes waste of time and waste of money. <b>But there is Docker!</b> now you can start the project with one click.</p>
+                <h1>So lets start to connect project to Docker?</h1>
+                <p class="longParagraphSection">
+                    Now that we know what Docker is, let’s use it. We’ll start by creating a Dockerfile to define how our app should run. Then, we’ll build an image and run it as a container. Step by step, you’ll see how easy it is to make your project portable and consistent across different environments. 
+                </p>
+                <h1 style="margin-top: 3vw;"><u>PROCESS STEPS:</u></h1>
+                <div class="sideBySide">
+                    <h1>1)  Create a Dockerfile</h1>
+                    <img  height="70" class="simpleImage" src="../../myImages/BlogPageDockerImages/Screenshot 2025-05-17 at 20.08.12.png">
+                </div>
+                <p class="longParagraphSection">
+                    In your project’s root directory, create a file named Dockerfile (no extension). This will contain the instructions for building your Docker image.               
+                </p>
+                <h1>2) Write Dockerfile Instructions</h1>
+                <p class="longParagraphSection">
+                    Inside the file, add basic instructions. For example, for a Node.js app: <br> <b class="warning">(Hover the code to see the hidden comment)</b>
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>Dockerfile</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                            <p class="codeLine"><b class="lineNumber">1</b> <span class="codeText">FROM node:18</span> <b class="hiddenComment">//Uses the official Node.js version 18 image as the base environment.</b></p>
+                            <p class="codeLine"><b class="lineNumber">2</b> <span class="codeText">WORKDIR /app</span>  <b class="hiddenComment">//Sets the working directory inside the container to /app.</b></p>
+                            <p class="codeLine"><b class="lineNumber">3</b> <span class="codeText">COPY . . </span> <b class="hiddenComment">//Copies everything from your project folder into the container’s /app directory.</b></p>
+                            <p class="codeLine"><b class="lineNumber">4</b> <span class="codeText">RUN npm install</span>  <b class="hiddenComment">//Installs all project dependencies inside the container.</b></p>
+                            <p class="codeLine"><b class="lineNumber">5</b> <span class="codeText">CMD ["npm", "start"]</span> <b class="hiddenComment">//Runs npm start when the container starts—this launches your app.</b></p>
+                    </div>
+                </div>
+                <p class="longParagraphSection">
+                    Adjust this according to your tech stack.
+                </p>
+                <h1>3) Build the Docker Image</h1>
+                <p class="longParagraphSection">
+                    Open your terminal, navigate to your project folder, and run:
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>Terminal</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                        <p class="codeLine terminalText"> ➜ &nbsp;<span class="codeText"> docker build -t my-app . </span> <b class="hiddenComment"> // Builds the Docker Image with the build context.</b></p>
+                    </div>
+                </div>
+                <h1>4) Run the Docker Container</h1>
+                <p class="longParagraphSection">
+                    After building, you can run the container with:
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>Terminal</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                        <p class="codeLine terminalText"> ➜ &nbsp;<span class="codeText"> docker run -p 3000:3000 my-app </span> <b class="hiddenComment"> // Runs the Docker Container.</b></p>
+                    </div>
+                </div>
+                <p class="longParagraphSection">
+                    (Replace 3000 with your app’s port if it’s different.)
+                </p>
+                <h1>5) Test Your App</h1>
+                <p class="longParagraphSection">
+                    Visit http://localhost:3000 in your browser. If everything went well, your app should be running inside Docker!
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../../Menu/MenuSettings.js"></script> 
+    <script src="../../Menu/AnimationSettings.js"></script>
+</body>
+</html>
