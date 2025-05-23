@@ -53,7 +53,12 @@ body {
 }
 .sideBySide{
     display: grid;
-    grid-template-columns: 1fr 2.3fr;
+    grid-template-columns: 1.2fr 2.3fr;
+    align-items: center;
+}
+.sideBySideCompose{
+    display: grid;
+    grid-template-columns: 3fr 2.3fr;
     align-items: center;
 }
 .window{
@@ -403,7 +408,6 @@ body {
 }
 
 @media (hover: none) and (max-width: 1024px) {
-
     h1{
         font-size: 6vw;
     }
@@ -431,9 +435,13 @@ body {
 
     .sideBySide {
         grid-template-columns: 1fr;
-        gap: 2vh;
     }
-
+    .sideBySideCompose{
+        grid-template-columns: 1fr;
+    }
+    .simpleImage{
+        display: none;
+    }
     .window {
         width: 90vw;
     }
@@ -459,10 +467,6 @@ body {
 
     .hiddenComment {
         display: none;
-    }
-    .simpleImage{
-        height: 15vw;
-        border-radius: 3vw;
     }
     .warning {
         font-size: 3.5vw;

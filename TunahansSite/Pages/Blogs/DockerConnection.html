@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../../myImages/logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="../../Styles/style.css">
 </head>
 <body style="justify-content:start; margin-bottom: 12vw;">
-    <div id="myBody">
+    <div id="myBody dockerBody">
 
         <div id="menuToggle">
 
@@ -131,10 +133,75 @@
                 <p class="longParagraphSection">
                     Visit http://localhost:3000 in your browser. If everything went well, your app should be running inside Docker!
                 </p>
+                <h1 class="mt-5">What is Docker Compose? <span class="text-secondary">(Optional Section)</span></h1>
+                <p class="longParagraphSection">
+                    If you came to this point you dont have to do this section. But if you use the it would be better to use Docker. <br><br>
+                    Docker Compose is a tool that lets you manage multi-container Docker applications with ease. Instead of starting each container manually with long docker run commands, you define all your services (like backend, frontend, and database) in a simple docker-compose.yml file. With one command—docker compose up—you can start everything at once. It’s especially useful in development, where multiple services need to run together seamlessly.
+                </p>
+                <h1 style="margin-top: 3vw;"><u>PROCESS STEPS:</u></h1>
+                <div class="sideBySideCompose">
+                    <h1>1) Create a docker-compose.yml file</h1>
+                    <img class="simpleImage" src="../../myImages/BlogPageDockerImages/Screenshot 2025-05-23 at 10.51.29.png">
+                </div>
+                <p class="longParagraphSection">
+                    In your project root, create a file named docker-compose.yml.               
+                </p>
+                <h1>2) Define Services</h1>
+                <p class="longParagraphSection">
+                    Inside the file, define your app and other services. For example: <br> <b class="warning">(Hover the code to see the hidden comment)</b>
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>docker-compose.yml</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                            <p class="codeLine"><b class="lineNumber">1</b> <span class="codeText">version: "3"</span> <b class="hiddenComment">//Specifies the Docker Compose file format version.</b></p>
+                            <p class="codeLine"><b class="lineNumber">2</b> <span class="codeText">services:</span>  <b class="hiddenComment">//Starts the definition of services (containers) to run.</b></p>
+                            <p class="codeLine"><b class="lineNumber">3</b> <span class="codeText">&nbsp;&nbsp;&nbsp;&nbsp;app:</span> <b class="hiddenComment">//Names the service app (you can choose any name).</b></p>
+                            <p class="codeLine"><b class="lineNumber">4</b> <span class="codeText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;build: .</span>  <b class="hiddenComment">//Tells Docker to build the image from the current directory (uses the Dockerfile).</b></p>
+                            <p class="codeLine"><b class="lineNumber">5</b> <span class="codeText"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ports: <br>&nbsp;<b style=" position: absolute; margin-left: 5vw;">- "3000:3000"</b> </span> <b class="hiddenComment">//Maps port 3000 of your machine to port 3000 in the container (host:container).</b></p>
+                    </div>
+                </div>
+                <h1>3) Build and Start Services</h1>
+                <p class="longParagraphSection">
+                    Run this in your terminal:
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>Terminal</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                        <p class="codeLine terminalText"> ➜ &nbsp;<span class="codeText"> docker compose up --build </span> <b class="hiddenComment"> // Builds and starts the services defined in docker-compose.yml.</b></p>
+                    </div>
+                </div>
+                <h1>5) Verify It’s Working</h1>
+                <p class="longParagraphSection">
+                    Visit http://localhost:3000. Your app should be running!
+                </p>
+                <h1>5) Stop Services</h1>
+                <p class="longParagraphSection">
+                    When done, shut everything down with:
+                </p>
+                <div class="window">
+                    <div class="windowTabWindow">
+                        <div class="windowTab">
+                            <label>Terminal</label>
+                        </div>
+                    </div>
+                    <div class="codeTab">
+                        <p class="codeLine terminalText"> ➜ &nbsp;<span class="codeText"> docker compose down </span> <b class="hiddenComment"> // Stops and removes the containers defined in docker-compose.yml.</b></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script src="../../Menu/MenuSettings.js"></script> 
     <script src="../../Menu/AnimationSettings.js"></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
