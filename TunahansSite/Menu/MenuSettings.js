@@ -2,9 +2,36 @@
 const myDiv = document.getElementById("myDiv");
 let menuIsOpen = false;
 
-window.addEventListener("mousemove", function(event) {
-    const mouseY = event.clientY;
-    if (mouseY < 100 && menuIsOpen == false) {
+// Check if page can be scrolled
+function canScroll() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+}
+
+// Initialize menu state - open if at top or if page can't scroll
+function initializeMenu() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (!canScroll() || currentScrollTop === 0) {
+        // Open menu
+        if (!menuIsOpen) {
+            myDiv.classList.add("come");
+            myDiv.addEventListener("animationend", function(){
+                myDiv.classList.remove("come");
+                myDiv.style = "top: 0px;"
+            });
+            menuIsOpen = true;
+        }
+    }
+}
+
+// Initialize on page load
+initializeMenu();
+
+window.addEventListener("scroll", function() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // If at top of page - open menu
+    if (currentScrollTop === 0 && menuIsOpen == false) {
         myDiv.classList.add("come");
         myDiv.addEventListener("animationend", function(){
             myDiv.classList.remove("come");
@@ -12,7 +39,8 @@ window.addEventListener("mousemove", function(event) {
         });
         menuIsOpen = true;
     }
-    else if (mouseY >= 300 && menuIsOpen == true){
+    // If not at top of page - close menu
+    else if (currentScrollTop > 0 && menuIsOpen == true) {
         myDiv.classList.add("left");
         myDiv.addEventListener("animationend", function(){
             myDiv.classList.remove("left");
