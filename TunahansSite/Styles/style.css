@@ -1,10 +1,9 @@
 body {
-    background-color: rgb(10, 10, 10);
+    background: linear-gradient(to bottom, #0c001f, #19002f);
+    min-height: 98vh;
     color: white;
     font-family: "Dela Gothic One", sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow-x: hidden;   
 }
 .firstTitle {
@@ -177,7 +176,12 @@ body {
     right: 0;
     left: 0;
     height: 8vh;
-    background-color: rgb(25, 25, 25);
+    background: linear-gradient(to top, #090017, #1a0030);
+    border: rgb(72, 0, 130) 0.1vw solid;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    border-radius: 20px;
     z-index: 0;
     padding-right: 5vw;
 }
@@ -206,8 +210,8 @@ body {
 }
 
 .pages {
+    color: rgb(188, 188, 188);
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -218,8 +222,7 @@ body {
 }
 
 .pages:hover {
-    color: rgb(176, 176, 176);
-    border-bottom: 3px solid white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -244,8 +247,8 @@ body {
 .openOption {
     position: absolute;
     top: 6.1vh;
-    background-color: rgb(25, 25, 25);
-    border-color: rgb(49, 49, 49);
+    background: linear-gradient(to bottom, #090017, #1a0030);
+    border: rgb(72, 0, 130) 0.1vw solid;
     border-style: solid;
     border-radius: 20px;
     height: 22vh;
@@ -320,7 +323,7 @@ body {
         top: -10vh;
     }
     100% {
-        top: 0;
+        top: 0vw;
     }
 }
 
@@ -356,16 +359,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:#141414;
+    background: linear-gradient(to bottom, #090017, #1a0030);
     color: rgb(192, 192, 192);
     width: 85vw;
     height: 10vh;
     border-radius: 15px;
+    border: rgb(72, 0, 130) 0.1vw solid;
     transition:all 0.2s ease;
 }
 
 .blogSection:hover{
-    background-color: #1c1c1c;
+    background: linear-gradient(to bottom, #0c0020, #23003f);
     color: rgb(255, 255, 255);
     cursor: pointer;
     transform: translateY(-10px);
@@ -588,6 +592,7 @@ body {
     }
     #menuToggle
     {
+
         visibility: visible;
     
         display: block;
@@ -693,7 +698,8 @@ body {
 
         #menu li
         {
-            background-color: #000000;
+            background: linear-gradient(to top, #090017, #1a0030);
+            border: rgb(140, 0, 255) 0.1vw solid;
             margin: 50px 0;
             padding: 25px;
             border-radius: 20px;
@@ -705,6 +711,6 @@ body {
         #menuToggle input:checked ~ ul
         {
             transform: none;
-            
+            background: linear-gradient(to bottom, #090017, #130023);
         }
 }

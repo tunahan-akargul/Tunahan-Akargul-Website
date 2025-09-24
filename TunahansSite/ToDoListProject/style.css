@@ -200,6 +200,13 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     background-color: rgb(25, 25, 25);
     z-index: 2;
     padding-right: 5vw;
+    background: linear-gradient(to top, #000000, #333333);
+    border: rgb(72, 0, 130) 0.1vw solid;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 1vh;
+    border-radius: 20px;
+    height: 5vw;
 }
 
 .menuButton {
