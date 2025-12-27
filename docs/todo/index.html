@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="../myImages/logo.png" type="image/png">
+    <link rel="icon" href="../myImages/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <p class="firstTitle">Write a mission.</p><br>
+    <input type="text" id="inputText" class="inputText" placeholder="Just Do It."><br>
+    <p class="everydayText" id="everydayText">Everyday</p><button id="everyday" class="everyday"></button><br>
+    <div class="choiceDiv1">
+        <label class="selectText">Day</label>
+        <label class="selectText">Month</label>
+        <label class="selectText">Year</label>
+    </div><br>
+    <div class="choiceDiv2">
+        <input type="text" id="day" class="choice" maxlength="2" placeholder="DD">
+        <input type="text" id="month" class="choice" maxlength="2" placeholder="MM" minlength="2">
+        <input type="text" id="year" class="choice" maxlength="4" placeholder="YYYY" style="width: 100px;">
+    </div>
+    <br>
+    <button class="makeMissionButton" id="makeMissionButton">ADD TO MISSIONS</button><br>
+    <label class="errorMessage" id="errorMessage"></label>
+
+    <script src="index.js"></script>
+    <script src="../Menu/MenuSettings.js"></script>
+</body>
+
+</html>
