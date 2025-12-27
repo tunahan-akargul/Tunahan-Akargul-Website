@@ -14,7 +14,7 @@
         <!-- Profile Image -->
         <v-col cols="12" md="4" class="text-center text-md-left">
           <v-img src="/images/profileImage.png" alt="Tunahan Akargül" max-width="280"
-            class="rounded-lg elevation-4 mx-auto mx-md-0" />
+            class="rounded-lg elevation-4 mx-auto mx-md-0 profileImage" />
         </v-col>
 
         <!-- About Text -->

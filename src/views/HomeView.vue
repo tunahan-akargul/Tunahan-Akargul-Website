@@ -3,7 +3,7 @@
     <v-row justify="center" align="center">
       <v-col cols="12" class="text-center">
         <!-- Profile Image -->
-        <v-avatar size="180" class="mb-6 elevation-4">
+        <v-avatar size="180" class="mb-6 elevation-4 profileImage">
           <v-img src="/images/profileImage.png" alt="Tunahan Akargül" />
         </v-avatar>
 
@@ -19,42 +19,24 @@
 
         <!-- Description -->
         <p class="text-body-1 text-medium-emphasis mb-8 mx-auto" style="max-width: 500px">
-          Building games and web applications with passion. 
+          Building games and web applications with passion.
           Explore my portfolio of mobile games, websites, and creative projects.
         </p>
 
         <!-- CTA Buttons -->
         <div class="d-flex flex-wrap justify-center ga-4 mb-8">
-          <v-btn
-            to="/sites"
-            color="primary"
-            size="large"
-            append-icon="mdi-arrow-right"
-          >
+          <v-btn to="/sites" color="primary" size="large" append-icon="mdi-arrow-right">
             View My Work
           </v-btn>
-          <v-btn
-            to="/about"
-            variant="outlined"
-            size="large"
-          >
+          <v-btn to="/about" variant="outlined" size="large">
             About Me
           </v-btn>
         </div>
 
         <!-- Social Links -->
         <div class="d-flex justify-center ga-3">
-          <v-btn
-            v-for="social in socialLinks"
-            :key="social.name"
-            :href="social.url"
-            target="_blank"
-            :icon="social.icon"
-            variant="tonal"
-            color="primary"
-            size="large"
-            :title="social.name"
-          />
+          <v-btn v-for="social in socialLinks" :key="social.name" :href="social.url" target="_blank" :icon="social.icon"
+            variant="tonal" color="primary" size="large" :title="social.name" />
         </div>
       </v-col>
     </v-row>
