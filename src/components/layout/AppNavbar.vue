@@ -55,7 +55,7 @@ const isActive = (path: string) => {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: rgb(var(--v-theme-secondary));
+  color: rgb(var(--v-theme-primary));
   transition: all 0.3s ease;
 }
 

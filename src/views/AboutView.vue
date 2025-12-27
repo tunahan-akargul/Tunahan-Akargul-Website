@@ -27,24 +27,23 @@
             </p>
 
             <p class="mb-4">
-              When I'm not coding, you can find me playing football or table tennis.
-              I believe in combining creativity with technical skills to build
-              meaningful digital experiences.
-            </p>
-
-            <p class="mb-4">
               I have experience in Unity game development using C#, as well as
-              frontend development with HTML, CSS, and JavaScript. I'm always eager
+              frontend development with Vue.js. I'm always eager
               to learn new technologies and take on challenging projects.
             </p>
 
-            <p>
+            <p class="mb-4">
               Currently, I'm working at
               <a href="https://apimeet.com/" target="_blank" class="text-primary font-weight-medium">
                 API MEET
               </a>,
               where I continue to grow as a developer and contribute to exciting projects.
             </p>
+
+            <p class="mb-4">
+              By the way about my hobbies i love playing tennis, go hiking and playing football.
+            </p>
+            
           </div>
         </v-col>
       </v-row>
