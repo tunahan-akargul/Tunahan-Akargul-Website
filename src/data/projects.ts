@@ -98,9 +98,9 @@ export const socialLinks = [
         url: 'https://github.com/tunahan-akargul',
     },
     {
-        name: 'Google Play',
-        icon: 'mdi-google-play',
-        url: 'https://play.google.com/store/apps/developer?id=T.A.+Games',
+        name: 'Linkedin',
+        icon: 'mdi-linkedin',
+        url: 'https://www.linkedin.com/in/tunahan-akargul/'
     },
     {
         name: 'Work',
