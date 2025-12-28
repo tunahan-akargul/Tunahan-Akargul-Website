@@ -6,6 +6,7 @@ export interface Project {
     tags: string[]
     link: string
     platform: 'android' | 'pc' | 'web'
+    story?: string
 }
 
 export const games: Project[] = [
@@ -17,6 +18,7 @@ export const games: Project[] = [
         tags: ['Unity', 'C#', 'Android'],
         link: 'https://play.google.com/store/apps/details?id=com.DGames.MlayimFirarda&hl=tr',
         platform: 'android',
+        story: 'These were some of my first games ever. Especially Alt F4 2D was my most successful game — it reached 5,000 downloads in just 1.5 months! With the ad revenue, I earned enough to cover about a month of high school scholarship. It was my first ever earnings from something I created.\n\nBut when I tried to withdraw the money from Google AdMob, I couldn\'t. The account was registered under my older brother\'s name because I was only 16 — under the required age. AdMob told me I couldn\'t access the funds.\n\nI thought, "At least I still have my games." But a week later, I sold my laptop. The project files were on a flash drive. When I set up my new laptop and checked my backup... I had saved the wrong files. Only the code remained — no assets, no complete projects. And after that I had to remove the project from Google Play Store, that\'s why the project is not available on Google Play Store.\n\nI was devastated. I didn\'t make any games for 2 months. After that, I started 4 new game projects and finished one of them. The others are still waiting — but I know I\'ll complete them someday.\n\nIt was a painful experience, but it taught me a lot. And I\'m still here, still building.',
     },
     {
         id: 'alt-f4-2d',
@@ -26,6 +28,7 @@ export const games: Project[] = [
         tags: ['Unity', 'C#', 'Android'],
         link: 'https://play.google.com/store/apps/details?id=com.T.A.Games.ALTF42D&hl=tr',
         platform: 'android',
+        story: 'These were some of my first games ever. Especially Alt F4 2D was my most successful game — it reached 5,000 downloads in just 1.5 months! With the ad revenue, I earned enough to cover about a month of high school scholarship. It was my first ever earnings from something I created.\n\nBut when I tried to withdraw the money from Google AdMob, I couldn\'t. The account was registered under my older brother\'s name because I was only 16 — under the required age. AdMob told me I couldn\'t access the funds.\n\nI thought, "At least I still have my games." But a week later, I sold my laptop. The project files were on a flash drive. When I set up my new laptop and checked my backup... I had saved the wrong files. Only the code remained — no assets, no complete projects. And after that I had to remove the project from Google Play Store, that\'s why the project is not available on Google Play Store.\n\nI was devastated. I didn\'t make any games for 2 months. After that, I started 4 new game projects and finished one of them. The others are still waiting — but I know I\'ll complete them someday.\n\nIt was a painful experience, but it taught me a lot. And I\'m still here, still building.',
     },
     {
         id: 'bunny-hop',

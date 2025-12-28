@@ -11,13 +11,7 @@
     <!-- Projects Grid -->
     <v-container style="max-width: 1200px">
       <v-row>
-        <v-col
-          v-for="game in games"
-          :key="game.id"
-          cols="12"
-          sm="6"
-          lg="4"
-        >
+        <v-col v-for="game in games" :key="game.id" cols="12" sm="6" lg="4">
           <ProjectCard :project="game" />
         </v-col>
       </v-row>
