@@ -5,7 +5,7 @@
       <!-- Logo -->
       <router-link to="/" class="d-flex align-center text-decoration-none">
         <v-avatar size="32" class="mr-2 rounded-0">
-          <v-img src="/images/logo.png" alt="Logo" />
+          <v-img src="/logo.png" alt="Logo" />
         </v-avatar>
         <span class="logo-text">Tunahan Akargül</span>
       </router-link>
