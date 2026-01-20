@@ -29,6 +29,14 @@ export const blogPosts: BlogPost[] = [
         category: 'Development',
         excerpt: 'Learn what is an API and how it works. A beginner-friendly guide to understanding APIs with a restaurant analogy.',
         tags: ['API', 'Development'],
+    },
+    {
+        slug: 'prompt-engineering',
+        title: 'Prompt Engineering',
+        date: '2025',
+        category: 'AI',
+        excerpt: 'Master the skill of getting better results from AI by giving clearer instructions, context, constraints, and evaluation.',
+        tags: ['AI', 'Productivity'],
     }
 ]
 

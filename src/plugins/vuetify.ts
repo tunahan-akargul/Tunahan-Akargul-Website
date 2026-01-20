@@ -23,6 +23,25 @@ const lightTheme = {
     },
 }
 
+const darkTheme = {
+    dark: true,
+    colors: {
+        background: '#0f172a',
+        surface: '#1e293b',
+        'surface-variant': '#334155',
+        primary: '#10b981',
+        'primary-darken-1': '#059669',
+        secondary: '#34d399',
+        error: '#f87171',
+        info: '#60a5fa',
+        success: '#34d399',
+        warning: '#fbbf24',
+        'on-background': '#f1f5f9',
+        'on-surface': '#f1f5f9',
+        'on-surface-variant': '#94a3b8',
+    },
+}
+
 export default createVuetify({
     components,
     directives,
@@ -30,6 +49,7 @@ export default createVuetify({
         defaultTheme: 'light',
         themes: {
             light: lightTheme,
+            dark: darkTheme,
         },
     },
     defaults: {

@@ -27,6 +27,11 @@ const routes = [
         component: () => import('@/views/ApiBlogPostView.vue'),
     },
     {
+        path: '/blog/prompt-engineering',
+        name: 'prompt-engineering-blog-post',
+        component: () => import('@/views/PromptEngineeringBlogPostView.vue'),
+    },
+    {
         path: '/games',
         name: 'games',
         component: () => import('@/views/GamesView.vue'),

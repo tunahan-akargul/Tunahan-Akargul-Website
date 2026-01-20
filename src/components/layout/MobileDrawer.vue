@@ -1,20 +1,20 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
-    temporary
+  <v-navigation-drawer 
+    v-model="drawer" 
+    temporary 
     location="right"
   >
     <v-list nav class="pa-4">
       <v-list-item
-        v-for="link in navLinks"
-        :key="link.to"
-        :to="link.to"
-        :title="link.label"
-        :prepend-icon="link.icon"
-        rounded="lg"
-        :active="isActive(link.to)"
-        active-color="primary"
-        @click="drawer = false"
+      v-for="link in navLinks"
+      :key="link.to"
+      :to="link.to"
+      :title="link.label"
+      :prepend-icon="link.icon"
+      rounded="lg"
+      :active="isActive(link.to)"
+      active-color="primary"
+      @click="drawer = false" 
       />
     </v-list>
 
@@ -22,15 +22,15 @@
       <div class="pa-4">
         <v-divider class="mb-4" />
         <div class="d-flex justify-center ga-2">
-          <v-btn
-            v-for="social in socialLinks"
-            :key="social.name"
-            :href="social.url"
-            target="_blank"
-            :icon="social.icon"
-            variant="tonal"
-            color="primary"
-            size="small"
+          <v-btn 
+          v-for="social in socialLinks" 
+          :key="social.name" 
+          :href="social.url" 
+          target="_blank" 
+          :icon="social.icon"
+          variant="tonal" 
+          color="primary" 
+          size="small" 
           />
         </div>
       </div>
@@ -52,6 +52,7 @@ const navLinks = [
   { label: 'Blog', to: '/blog', icon: 'mdi-post' },
   { label: 'Games', to: '/games', icon: 'mdi-gamepad-variant' },
   { label: 'Sites', to: '/sites', icon: 'mdi-web' },
+  { label: 'Contact', to: '/contact', icon: 'mdi-email' },
 ]
 
 const isActive = (path: string) => {

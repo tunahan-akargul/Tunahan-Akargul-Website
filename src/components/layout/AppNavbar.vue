@@ -18,9 +18,11 @@
           :class="{ 'nav-link--active': isActive(link.to) }">
           {{ link.label }}
         </router-link>
+        <ThemeToggle />
       </nav>
 
       <!-- Mobile Menu Button -->
+      <ThemeToggle class="d-md-none mr-1" />
       <v-app-bar-nav-icon class="d-md-none" @click="$emit('toggle-drawer')" />
     </v-container>
   </v-app-bar>
@@ -28,6 +30,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import ThemeToggle from '@/components/layout/ThemeToggle.vue'
 
 defineEmits(['toggle-drawer'])
 

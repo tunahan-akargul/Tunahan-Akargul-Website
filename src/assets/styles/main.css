@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Light mode */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -21,6 +21,19 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
+}
+
+/* Custom scrollbar - Dark mode */
+.v-theme--dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.v-theme--dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.v-theme--dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
 }
 
 /* Wave animation for hero greeting */

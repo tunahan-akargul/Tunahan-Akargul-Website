@@ -20,8 +20,11 @@ import { ref } from 'vue'
 import AppNavbar from '@/components/layout/AppNavbar.vue'
 import MobileDrawer from '@/components/layout/MobileDrawer.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
+import { useThemePreference } from '@/composables/useThemePreference'
 
 const drawer = ref(false)
+
+useThemePreference()
 </script>
 
 <style>
