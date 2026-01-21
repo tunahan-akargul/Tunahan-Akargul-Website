@@ -117,7 +117,7 @@
                     Real-World Examples: Bad vs Good Prompts
                 </h2>
                 <p class="text-body-1 text-medium-emphasis mb-6">
-                    Let's see the difference in action. Here are 3 real scenarios showing how a small change in prompt
+                    Let's see the difference in action. Here are 2 real scenarios showing how a small change in prompt
                     structure leads to dramatically better results.
                 </p>
 
