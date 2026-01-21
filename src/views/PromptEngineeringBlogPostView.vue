@@ -243,61 +243,6 @@
                         </v-row>
                     </v-card-text>
                 </v-card>
-
-                <!-- Example 3: Write a Blog Post -->
-                <v-card variant="outlined" class="mb-6">
-                    <v-card-item class="bg-surface-variant">
-                        <v-card-title class="d-flex align-center">
-                            <v-chip color="warning" size="small" class="mr-2">3</v-chip>
-                            "Write a blog post"
-                        </v-card-title>
-                    </v-card-item>
-                    <v-card-text>
-                        <v-row>
-                            <v-col cols="12">
-                                <v-card variant="tonal" color="error" class="pa-4 h-100 mt-4">
-                                    <div class="d-flex align-center mb-3">
-                                        <v-icon color="error" class="mr-2">mdi-close-circle</v-icon>
-                                        <h4 class="text-subtitle-1 font-weight-bold">Bad Prompt</h4>
-                                    </div>
-                                    <v-card variant="outlined" class="pa-3 mb-3 bg-surface">
-                                        <code class="text-body-2">"Write a blog about prompt engineering."</code>
-                                    </v-card>
-                                    <h5 class="text-subtitle-2 font-weight-bold mb-2">Why it's bad:</h5>
-                                    <v-list density="compact" bg-color="transparent">
-                                        <v-list-item class="px-0">
-                                            <template #prepend>
-                                                <v-icon size="small" color="error">mdi-minus</v-icon>
-                                            </template>
-                                            Generic audience
-                                        </v-list-item>
-                                        <v-list-item class="px-0">
-                                            <template #prepend>
-                                                <v-icon size="small" color="error">mdi-minus</v-icon>
-                                            </template>
-                                            Generic content, no structure
-                                        </v-list-item>
-                                        <v-list-item class="px-0">
-                                            <template #prepend>
-                                                <v-icon size="small" color="error">mdi-minus</v-icon>
-                                            </template>
-                                            You'll get "fluffy" content
-                                        </v-list-item>
-                                    </v-list>
-                                </v-card>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-card variant="tonal" color="success" class="pa-4 h-100">
-                                    <div class="d-flex align-center mb-3">
-                                        <v-icon color="success" class="mr-2">mdi-check-circle</v-icon>
-                                        <h4 class="text-subtitle-1 font-weight-bold">Good Prompt</h4>
-                                    </div>
-                                    <CodeBlock filename="Structured Prompt" :lines="blogGoodPromptLines" />
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-card-text>
-                </v-card>
             </section>
 
             <v-divider class="my-8" />
@@ -852,25 +797,5 @@ const bugFixGoodPromptLines: CodeLine[] = [
     { lineNumber: 14, code: '- Keep changes minimal.' },
     { lineNumber: 15, code: '- Explain root cause in 3–6 bullets.' },
     { lineNumber: 16, code: '- Provide exact code patch (before/after or diff).' },
-]
-
-const blogGoodPromptLines: CodeLine[] = [
-    { lineNumber: 1, code: 'Write a blog post for software engineers about prompt engineering.' },
-    { lineNumber: 2, code: '' },
-    { lineNumber: 3, code: 'Audience:', comment: 'Specific target' },
-    { lineNumber: 4, code: '- Devs who think prompt engineering is just "role + goal + context"' },
-    { lineNumber: 5, code: '' },
-    { lineNumber: 6, code: 'Must include:', comment: 'Required sections' },
-    { lineNumber: 7, code: '- Strong intro with a real pain point (wasted time, vague output).' },
-    { lineNumber: 8, code: '- 3 bad prompts vs 3 good prompts (with why).' },
-    { lineNumber: 9, code: '- A simple framework + a "debugging prompts" section.' },
-    { lineNumber: 10, code: '- A mini roadmap (1 week / 1 month).' },
-    { lineNumber: 11, code: '- Practical tone: no hype.' },
-    { lineNumber: 12, code: '' },
-    { lineNumber: 13, code: 'Format:', comment: 'Output structure' },
-    { lineNumber: 14, code: '- Markdown with headings + code blocks.' },
-    { lineNumber: 15, code: '' },
-    { lineNumber: 16, code: 'Length:', comment: 'Size constraint' },
-    { lineNumber: 17, code: '- 900–1200 words.' },
 ]
 </script>
